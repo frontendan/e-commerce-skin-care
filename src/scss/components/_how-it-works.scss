@@ -1,0 +1,122 @@
+@use "../variables" as *;
+@use "../utilities//typography" as *;
+
+.howitworks {
+    background: $bg-about;
+    padding: 3.5rem 0;
+
+    &__intro {
+        text-align: center;
+        margin-bottom: 1.7rem;
+    }
+
+    &__eyebrow {
+        @include subtext;
+        display: block;
+        color: $text-base;
+        margin-bottom: 1.5rem;
+    }
+
+    &__icon {
+        width: 110px;
+        height: 110px;
+        display: block;
+        margin: 0 auto .75rem auto;
+    }
+
+    &__title {
+        @include h1;
+        color: $brand-primary;
+        font-size: clamp(2rem, 5vw, 3rem);
+        letter-spacing: -1.0px;
+        margin-top: 1.5rem;
+    }
+
+    &__grid {
+        list-style: none;
+        margin: 2rem 0 0 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        @media (max-wdith: 1023px) {
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+    }
+
+    &__step {}
+
+
+    &__media {
+        position: relative;
+        border-radius: 12%;
+        overflow: hidden;
+        box-shadow: 0 10px 24px rgba(0,0,0,.12);
+        margin-bottom: .9rem;
+        aspect-ratio: 4 / 5;  
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;   
+        display: block;
+    }
+
+    &__badge {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $color-white;
+        color: $brand-primary;
+        font-weight: 800;
+        font-family: $font-body;
+        display: inline-flex; align-items: center; justify-content: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,.18);
+        z-index: 2;
+    }
+
+    /* Responsive grid */
+    &__grid {
+        list-style: none;
+        margin: 2rem 0 0 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        @media (max-width: 1023px) {
+            grid-template-columns: 1fr 1fr; 
+        }
+
+        @media (max-width: 639px) {
+            grid-template-columns: 1fr; 
+        }
+    }
+
+    &__caption {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: start;
+        gap: .6rem;
+    }
+
+    &__product {
+        width: 70px; height: auto;
+        object-fit:fill;
+        display: block;
+    }
+
+    &__text {
+        font-family: $font-body;
+        font-size: .95rem;
+        line-height: 1.5;
+        color: $text-base;
+    }
+
+}
