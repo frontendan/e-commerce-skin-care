@@ -4,7 +4,7 @@
 $hero-min-h: 640px !default;
 
 .hero {
-  background: radial-gradient(1200px 800px at 35% 20%, #233647 0%, #1d2d3b 45%, #2c3454 100%);
+  background: $bg-hero;
   color: $color-white;
 
   &__inner {
@@ -46,7 +46,7 @@ $hero-min-h: 640px !default;
     padding: 1.2rem 6rem;
 
     &.btn--accent {
-      background: $color-accent;
+      background: $brand-accent;
       color: $color-dark;
     }
   }
