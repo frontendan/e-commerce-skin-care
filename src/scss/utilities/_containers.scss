@@ -2,19 +2,20 @@
 
 
 .grid-container {
-  max-width: 1200px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  max-width: 100rem!important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 
   &--tight {
-    max-width: none;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   &--edge {
-    max-width: none;
     padding-left: 0;
     padding-right: 0;
+    max-width: none;
   }
 }
