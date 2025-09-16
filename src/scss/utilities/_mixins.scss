@@ -1,0 +1,46 @@
+@use "../variables" as *;
+
+@mixin cta-base(
+  $bg: $color-dark,
+  $color: $color-white,
+  $padding-y: 1rem,
+  $padding-x: 2rem,
+  $radius: $radius-pill
+) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background: $bg;
+  color: $color;
+  padding: $padding-y $padding-x;
+  border-radius: $radius;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+
+@mixin hover-lift(
+  $y: -4px,
+  $shadow: 0 8px 18px rgba(0,0,0,.25),
+  $active-y: -1px,
+  $active-shadow: 0 4px 10px rgba(0,0,0,.2),
+  $transition: all .25s ease
+) {
+  transition: $transition;
+
+  &:hover {
+    transform: translateY($y);
+    box-shadow: $shadow;
+  }
+
+  &:active {
+    transform: translateY($active-y);
+    box-shadow: $active-shadow;
+  }
+}
