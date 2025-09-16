@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "foundation-sites": "^6.9.0"
+  },
+ "scripts": {
+  "build": "sass --load-path=node_modules/foundation-sites/scss src/scss/app.scss dist/css/app.css --style=expanded",
+  "watch": "sass --watch --load-path=node_modules/foundation-sites/scss src/scss/app.scss:dist/css/app.css --style=expanded"
+},
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.92.1"
+  },
+  "name": "e-commerce-skin-care",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

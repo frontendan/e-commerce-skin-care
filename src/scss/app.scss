@@ -1,0 +1,8 @@
+
+/* Load Foundation from node_modules */
+@use "foundation" as *;
+
+/*Foundation components */
+@include foundation-everything;
+
+
