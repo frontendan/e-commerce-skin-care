@@ -4,9 +4,8 @@
 @use "../utilities//buttons"  as *;
 
 .second-set {
-    padding: 3rem 0;
+    padding: 3rem 4rem;
     background: $bg-about;
-    margin-bottom: 3rem;
 
     &__inner {
         display: grid;

@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../utilities/buttons" as *;
 
 $nav-height: 76px !default;
 $pill-bg:   $color-dark !default;
@@ -64,19 +65,12 @@ $pill-bg:   $color-dark !default;
   }
 
   .btn {
-    display: inline-flex; 
-    align-items: center; 
-    justify-content: center;
-    text-transform: uppercase; 
-    letter-spacing: .12em;
-    padding: .9rem 1.6rem; 
-    border-radius: $radius-pill; 
-    text-decoration: none;
+    @extend .btn;
     &--dark-pill { 
       background: $pill-bg; 
       color: $color-white; 
     }
-    &--dark-pill:hover { filter: brightness(.95); }
+    &--dark-pill:hover { color: $color-accent; }
   }
 
   &__cart {
