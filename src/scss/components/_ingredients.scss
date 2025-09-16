@@ -1,0 +1,81 @@
+@use "../variables" as *;
+@use "../utilities//typography" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/buttons" as *;
+
+.ingredients {
+  background: $bg-about;
+  padding: 3rem 0;
+
+  &__intro {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  &__title {
+    @include h1;
+    color: $brand-primary;
+    margin-bottom: 1rem;
+  }
+
+
+  &__cta {
+    background: $color-accent;
+    color: $color-dark;
+
+     &.btn--accent {
+      background: $brand-accent;
+      color: $color-dark;
+    }
+  }
+  
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__img {
+    flex: 0 0 64px;
+    height: 132px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  &__text {
+    .ingredients__name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: $brand-primary;
+      margin: 0 0 .25rem 0;
+    }
+
+    .ingredients__desc {
+      font-family: $font-body;
+      font-size: .85rem;
+      color: $text-base;
+      opacity: .85;
+      margin: 0;
+    }
+  }
+}
+
+
+    
+
+

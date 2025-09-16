@@ -1,10 +1,12 @@
 @use "../variables" as *;
 @use "../utilities//typography" as *;
 @use "../utilities/mixins" as *;
+@use "../utilities//buttons"  as *;
 
 .set {
     padding: 3rem 0;
     background: $color-white;
+    border-bottom: 1px solid rgba(0,0,0,.06);
 
     &__inner {
         display: grid;
@@ -68,9 +70,10 @@
     }
 
     &__cta {
-        @include cta-base($bg: $color-dark, $padding-x: 4rem);
+        @extend .btn;
         @include hover-lift();
-
+        background: $color-dark;
+        color: $color-white;
         .set__price-old {
             text-decoration: line-through;
             opacity: .5;
