@@ -1,0 +1,42 @@
+// 🎨 Colors
+$color-primary: #1abc9c;   // Teal/green brand color
+$color-accent:  #f1c40f;   // Yellow highlight
+$color-dark:    #111827;   // Very dark gray/black background
+$color-light:   #f9fafb;   // Light gray background
+$color-white:   #ffffff;   // Pure white
+$color-text:    #1f2937;   // Default dark text
+$color-muted:   #6b7280;   // Subtext / secondary gray
+
+// 📐 Spacing Scale (8px baseline)
+$sp-0: 0;
+$sp-1: 0.25rem;  // 4px
+$sp-2: 0.5rem;   // 8px
+$sp-3: 0.75rem;  // 12px
+$sp-4: 1rem;     // 16px
+$sp-5: 1.5rem;   // 24px
+$sp-6: 2rem;     // 32px
+$sp-7: 3rem;     // 48px
+$sp-8: 4rem;     // 64px
+
+// 🔤 Typography
+$font-family-base: 'Helvetica Neue', Arial, sans-serif;
+$font-family-heading: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+
+$font-weight-normal: 400;
+$font-weight-bold:   700;
+
+$heading-1-size: 2.5rem; // ~40px
+$heading-2-size: 2rem;   // ~32px
+$heading-3-size: 1.5rem; // ~24px
+$body-font-size: 1rem;   // ~16px
+
+// 🟦 Border Radius
+$radius-sm: 0.25rem;   // 4px
+$radius-md: 0.5rem;    // 8px
+$radius-lg: 1rem;      // 16px
+$radius-pill: 9999px;  // fully rounded
+
+// 🌫️ Shadows
+$shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+$shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+$shadow-lg: 0 10px 15px rgba(0,0,0,0.15);

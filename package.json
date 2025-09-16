@@ -2,12 +2,16 @@
   "dependencies": {
     "foundation-sites": "^6.9.0"
   },
- "scripts": {
+  "scripts": {
   "build": "sass --load-path=node_modules/foundation-sites/scss src/scss/app.scss dist/css/app.css --style=expanded",
-  "watch": "sass --watch --load-path=node_modules/foundation-sites/scss src/scss/app.scss:dist/css/app.css --style=expanded"
+  "watch:sass": "sass --watch --load-path=node_modules/foundation-sites/scss src/scss/app.scss:dist/css/app.css --style=expanded",
+  "serve": "browser-sync start --server --files 'dist/css/*.css, index.html, src/**/*.js'",
+  "dev": "npm-run-all --parallel watch:sass serve"
 },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "sass": "^1.92.1"
