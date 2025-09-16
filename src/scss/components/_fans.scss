@@ -1,0 +1,111 @@
+@use "../variables" as *;
+@use "../utilities/typography" as *;
+
+.fans {
+  background: $bg-about;
+  padding: 3rem 0;
+
+  &__title {
+    @include h1;
+    color: $brand-primary;
+    text-align: center;
+    margin-bottom: 1.75rem;
+    margin-top: 3rem;
+  }
+
+  &__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: 1200px) { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 900px)  { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 560px)  { grid-template-columns: 1fr; }
+  }
+
+  &__card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 18px;
+    overflow: hidden;
+    aspect-ratio: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 10px 20px rgba(0,0,0,.12);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 28px rgba(0,0,0,.18);
+      transition: all .25s ease;
+    }
+  }
+
+  &__ctrl {
+    position: absolute;
+    width: 38px; height: 38px;
+    border: 0; border-radius: 999px;
+    background: rgba(255,255,255,.95);
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    cursor: pointer;
+    transition: transform .15s ease;
+
+    &:hover { transform: scale(1.06); }
+
+    &--mute { top: 12px; right: 12px; background: url("../../src/assets/element/mute.svg") center/40px no-repeat, rgba(255,255,255,.95); }
+    &--play { left: 50%; top: 50%; transform: translate(-50%, -50%); background:url("../../src/assets/element/playbutton.svg") center/40px no-repeat, rgba(255,255,255,.95); }
+  }
+
+  &__meta {
+    background: $color-white;
+    padding: .9rem 1rem;
+    border-radius: 12px;
+    margin: 0.75rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .75rem;
+    align-items: center;
+  }
+
+  &__stars {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: .25rem;
+    img { width: 80px;  }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+  }
+
+  &__name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: $brand-primary;
+    font-size: .9rem;
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+
+  &__price {
+    font-family: $font-body;
+    font-size: .85rem;
+    color: $text-base;
+    opacity: .85;
+  }
+
+  &__add {
+    justify-self: end;
+    padding: .5rem 1.2rem;
+    border-radius: $radius-pill;
+    font-size: .8rem;
+  }
+}
