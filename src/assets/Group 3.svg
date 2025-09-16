@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="24px" viewBox="0 0 34 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Landing" transform="translate(-18, -47)" stroke="#2E302E">
+            <g id="Group-3" transform="translate(19, 48)">
+                <line x1="0.64" y1="0.5" x2="31.36" y2="0.5" id="Line" stroke-width="2"></line>
+                <line x1="0.64" y1="10.5" x2="31.36" y2="10.5" id="Line-Copy" stroke-width="2"></line>
+                <line x1="0.64" y1="21.5" x2="31.36" y2="21.5" id="Line-Copy-2" stroke-width="2"></line>
+            </g>
+        </g>
+    </g>
+</svg>

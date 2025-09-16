@@ -1,0 +1,117 @@
+@use "../variables" as *;
+
+$nav-height: 76px !default;
+$pill-bg:   $color-dark !default;
+
+.site-header {
+  position: sticky;
+  top: 38px;
+  z-index: 1010;
+  background: $color-white;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+
+  &__inner {
+    height: $nav-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.site-header__left { display: flex; align-items: center; gap: 14px; }
+
+.site-header__burger {
+  position: relative;
+  width: 44px; height: 44px;
+  padding: 0; border: 0;
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  line-height: 0;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover { background: $color-light; }
+  span {
+    position: absolute;
+    left: 50%;
+    width: 22px; height: 2px;
+    background: $color-dark;
+    border-radius: 2px;
+    transform: translateX(-50%);
+  }
+
+  span:nth-child(1) { top: 14px; }
+  span:nth-child(2) { top: 21px; }
+  span:nth-child(3) { top: 28px; }
+}
+
+.site-header__brand {
+  position: relative;
+  font-family: $font-family-heading;
+  font-weight: 800;
+  font-size: 2.5rem;
+  letter-spacing: .02em;
+  color: $color-dark;
+  text-decoration: none;
+  line-height: 1;
+}
+
+
+  &__right { 
+    display: flex; 
+    align-items: 
+    center; gap: 1rem; 
+  }
+
+  .btn {
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    text-transform: uppercase; 
+    letter-spacing: .12em;
+    padding: .9rem 1.6rem; 
+    border-radius: $radius-pill; 
+    text-decoration: none;
+    &--dark-pill { 
+      background: $pill-bg; 
+      color: $color-white; 
+    }
+    &--dark-pill:hover { filter: brightness(.95); }
+  }
+
+  &__cart {
+    position: relative; 
+    display: inline-flex; 
+    align-items: center;
+    img { width: 28px; 
+      height: 28px; 
+      display: block; 
+    }
+  }
+
+  &__badge {
+    position: absolute; 
+    top: -6px; 
+    right: -8px;
+    min-width: 18px; 
+    height: 18px; 
+    padding: 0 5px;
+    background: $color-accent; 
+    color: $color-white;
+    border-radius: 999px; 
+    font-size: 11px; 
+    font-weight: 800;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    line-height: 1;
+    box-shadow: 0 0 0 2px $color-white;
+  }
+}
+
+@media (max-width: 639px) {
+  .site-header {
+    &__brand { font-size: 2.1rem; }
+    .btn--dark-pill { padding: .7rem 1.2rem; }
+  }
+}

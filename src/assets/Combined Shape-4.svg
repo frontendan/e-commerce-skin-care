@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="55px" viewBox="0 0 42 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Combined Shape</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing" transform="translate(-1310, -10771)" fill="#EFF7FA">
+            <g id="Group-30-Copy-2" transform="translate(0, 10729)">
+                <path d="M1310,42 L1310,97 L1319.45946,97 C1329.25676,97 1335,90.46875 1335,74.3125 L1335,64.6875 C1335,48.53125 1329.25676,42 1319.45946,42 L1310,42 Z M1319.7973,50.25 L1320.81081,50.25 C1323.44595,50.25 1324.86486,52.175 1324.86486,55.13125 L1324.86486,83.525 C1324.86486,86.48125 1323.44595,88.40625 1320.81081,88.40625 L1319.7973,88.40625 L1319.7973,50.25 Z M1337,50.59375 L1342,50.59375 L1342,97 L1352,97 L1352,42 L1344.33333,42 L1337,45.4375 L1337,50.59375 Z" id="Combined-Shape" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

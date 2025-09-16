@@ -1,0 +1,23 @@
+@use "../variables" as *;
+
+$annc-height: 38px !default;
+$annc-topline: #e66a00 !default;
+
+.annc {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background: $color-accent;
+  border-top: 3px solid $annc-topline;
+
+  &__inner { height: $annc-height; display: grid; align-items: center; }
+
+  &__text {
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: $color-dark;
+  }
+}
