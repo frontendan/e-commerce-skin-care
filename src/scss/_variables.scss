@@ -1,44 +1,53 @@
-// 🎨 Colors
-$color-primary: #1abc9c;   // Teal/green brand color
-$color-accent:  #f1c40f;   // Yellow highlight
-$color-dark:    #111827;   // Very dark gray/black background
-$color-light:   #f9fafb;   // Light gray background
-$color-white:   #ffffff;   // Pure white
-$color-text:    #1f2937;   // Default dark text
-$color-muted:   #6b7280;   // Subtext / secondary gray
+/* ===========================
+   Core Palette
+   =========================== */
+$color-dark: rgba(34, 36, 48, 1);          // deep navy/black
+$color-yellow: rgba(255, 186, 0, 1);       // brand yellow (accent)
+$color-about-bg: rgba(239, 247, 250, 1);   // light blue-gray
+$color-hero-start: rgba(70, 78, 112, 1);
+$color-hero-end: rgba(32, 55, 70, 1);
 
-// 📐 Spacing Scale (8px baseline)
-$sp-0: 0;
-$sp-1: 0.25rem;  // 4px
-$sp-2: 0.5rem;   // 8px
-$sp-3: 0.75rem;  // 12px
-$sp-4: 1rem;     // 16px
-$sp-5: 1.5rem;   // 24px
-$sp-6: 2rem;     // 32px
-$sp-7: 3rem;     // 48px
-$sp-8: 4rem;     // 64px
+$color-white: #ffffff;
+$color-light: #f8f8f8;
 
-// 🔤 Typography
+$color-text: $color-dark;
+$color-accent: $color-yellow;
+
+/* ===========================
+   Semantic Colors
+   =========================== */
+$brand-primary: $color-dark;              // main brand color (text, headings, nav)
+$brand-accent: $color-yellow;             // highlight (buttons, badges, CTA strips)
+$bg-hero: linear-gradient(
+  232deg,
+  $color-hero-start 0%,
+  $color-hero-end 100%
+);
+$bg-about: $color-about-bg;
+$bg-light: $color-light;
+$text-base: $color-dark;
+$text-inverse: $color-white;
+
+/* ===========================
+   Radius & Shadows
+   =========================== */
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-pill: 999px;
+
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, .06);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, .18);
+
+/* ===========================
+   Spacing Scale
+   =========================== */
+$sp-1: 0.25rem;
+$sp-2: 0.5rem;
+$sp-3: 0.75rem;
+$sp-4: 1rem;
+$sp-5: 1.5rem;
+$sp-6: 2rem;
+
 $font-family-base: 'Helvetica Neue', Arial, sans-serif;
 $font-family-heading: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-
-$font-weight-normal: 400;
-$font-weight-bold:   700;
-
-$heading-1-size: 2.5rem; // ~40px
-$heading-2-size: 2rem;   // ~32px
-$heading-3-size: 1.5rem; // ~24px
-$body-font-size: 1rem;   // ~16px
-
-// 🟦 Border Radius
-$radius-sm: 0.25rem;   // 4px
-$radius-md: 0.5rem;    // 8px
-$radius-lg: 1rem;      // 16px
-$radius-pill: 9999px;  // fully rounded
-
-// 🌫️ Shadows
-$shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-$shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-$shadow-lg: 0 10px 15px rgba(0,0,0,0.15);
-
 
