@@ -3,11 +3,13 @@
 @use "variables" as *;
 @use "components/reset";
 
+
 /* Load Foundation from node_modules */
 @use "foundation" as *;
 
 /* Utilities */
 @use "utilities/containers";
+@use "utilities/mixins";
 @use "utilities/typography";
 
 @use "components/announcement";
@@ -17,6 +19,7 @@
 @use "components/how-it-works";
 @use "components/results";
 @use "components/benefits";
+@use "components/sets";
 
 /*Foundation components */
 @include foundation-everything;
