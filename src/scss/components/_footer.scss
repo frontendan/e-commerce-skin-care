@@ -83,7 +83,7 @@
     letter-spacing: .02em;
     cursor: pointer;
     transition: transform .18s ease, filter .18s ease;
-
+    font-family: $font-body;
     &:hover { transform: translateY(-1px); filter: brightness(1.06); }
     &:active { transform: translateY(0); }
   }
