@@ -1,0 +1,106 @@
+@use "../variables" as *;
+@use "../utilities//typography" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities//buttons"  as *;
+
+.second-set {
+    padding: 3rem 0;
+    background: $bg-about;
+    margin-bottom: 3rem;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        gap: 2.25rem;
+        align-items: center;
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+            text-align: center;
+            justify-items: center;
+        }
+    }
+
+    &__content {
+        max-width: 600px;
+    }
+
+    &__eyebrow {
+        @include subtext;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        @include h1;
+        color: $brand-primary;
+        margin-bottom: 1.5rem;
+    }
+
+    &__lead {
+        font-family: $font-body;
+        font-size: .95rem;
+        line-height: 1.6;
+        color: $text-base;
+        margin-bottom: 1.5rem;
+    }
+
+    &__list {
+        list-style: none;
+        margin:  0 0 2rem;
+        padding: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            font-family: $font-body;
+            font-size: .95rem;
+            margin-bottom: .75rem;
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+    &__cta {
+        @extend .btn;
+        @include hover-lift();
+        background: $color-dark;
+        color: $color-white;
+        .set__price-old {
+            text-decoration: line-through;
+            opacity: .5;
+            margin-left: .75rem;
+            font-weight: 400;
+        }
+
+        &:hover {
+            transform: translateY(-4px); 
+            box-shadow: 0 8px 18px rgba(0,0,0,.25); 
+            background: darken($color-dark, 5%);
+        }
+
+        &:active {
+            transform: translateY(-1px); 
+            box-shadow: 0 4px 10px rgba(0,0,0,.2);
+        }
+
+        @media (max-width: 900px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__art {
+        text-align: center;
+    }
+
+    &__img {
+        max-width: 100%;
+        height: auto;
+    }
+}
