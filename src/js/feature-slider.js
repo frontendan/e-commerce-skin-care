@@ -1,4 +1,4 @@
-const selector = '.about__features-grid[data-flickity-on-small]';
+const selector = '[data-flickity-on-small]';
 
 const smallMQ = window.matchMedia('(max-width: 639.98px)');
 const reduceMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -32,7 +32,7 @@ function disableCarousel(el) {
   flkty.destroy();
   instances.delete(el);
 
-  // Clean up any inline sizes Flickity may have set on children
+
   el.querySelectorAll('.about__item').forEach((cell) => {
     cell.style.removeProperty('position');
     cell.style.removeProperty('left');
@@ -54,7 +54,6 @@ function applyMode() {
   });
 }
 
-// init now
 applyMode();
 
 // respond to viewport changes

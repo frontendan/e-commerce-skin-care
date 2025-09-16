@@ -40,7 +40,7 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
 
-        @media (max-wdith: 1023px) {
+        @media (max-width: 1023px) {
             grid-template-columns: 1fr;
             gap: 1.25rem;
         }
@@ -119,4 +119,40 @@
         color: $text-base;
     }
 
+    @media (max-width: 639.98px) {
+    .howitworks {
+            &__grid {
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+            }
+            &__step {
+            
+            width: 82vw;
+            max-width: 28rem;
+            margin: 0 0.5rem;
+            }
+            
+            .flickity-enabled.is-draggable { cursor: grab; }
+            .flickity-enabled.is-draggable:active { cursor: grabbing; }
+        }
+    }
+
+    /* Medium+ */
+    @media (min-width: 640px) {
+    .howitworks {
+        &__grid {
+        display: grid;
+        margin-left: 0;
+        margin-right: 0;
+        }
+        &__step {
+        width: auto;
+        max-width: none;
+        margin: 0;
+        }
+    }
+    }
+    .howitworks__grid:not(.flickity-enabled) {
+    height: auto !important;
+    }
 }
