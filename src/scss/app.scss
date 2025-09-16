@@ -1,29 +1,16 @@
 
 /* Load Variables */
 @use "variables" as *;
+@use "components/reset";
 
 /* Load Foundation from node_modules */
 @use "foundation" as *;
 
+/* Utilities */
+@use "utilities/containers";
+
+@use "components/announcement";
+@use "components/header";
+
 /*Foundation components */
 @include foundation-everything;
-
-
-
-body {
-  background: $color-light;
-  color: $color-text;
-  font-family: $font-family-base;
-}
-
-h1 {
-  font-size: $heading-1-size;
-  color: $color-primary;
-}
-
-.button.test {
-  background: $color-accent;
-  color: $color-dark;
-  border-radius: $radius-md;
-  padding: $sp-3 $sp-5;
-}

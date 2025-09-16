@@ -3,19 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Foundation + Sass</title>
+  <title>E-Commerce Website</title>
   <link rel="stylesheet" href="dist/css/app.css">
 </head>
 <body>
 
-  <div class="grid-container">
-    <h1>Hello Foundation</h1>
-    <div class="grid-x grid-padding-x">
-      <div class="cell small-12 medium-6"><div class="callout">Left</div></div>
-      <div class="cell small-12 medium-6"><div class="callout">Right</div></div>
-    </div>
-    <button class="button test">Test Button</button>
+  <!-- Announcement Bar -->
+<section class="annc">
+  <div class="annc__inner grid-container">
+    <p class="annc__text">FREE SHIPPING ON US ORDERS OVER $100</p>
   </div>
+</section>
+
+<!-- Main Header -->
+<header class="site-header">
+  <div class="site-header__inner grid-container--tight">
+    <div class="site-header__left">
+      <button class="site-header__burger" aria-label="Open Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="/" class="site-header__brand">D1</a>
+    </div>
+
+
+    <div class="site-header__right">
+      <a href="#get-started" class="btn btn--dark-pill">GET&nbsp;STARTED</a>
+
+      <a href="#cart" class="site-header__cart">
+        <img src="/src/assets//cart.png" alt="Cart">
+        <span class="site-header__badge">1</span>
+      </a>
+    </div>
+  </div>
+</header>
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/what-input/dist/what-input.min.js"></script>
