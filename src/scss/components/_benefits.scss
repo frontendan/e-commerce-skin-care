@@ -1,0 +1,137 @@
+@use "../variables" as *;
+@use "../utilities/typography" as *;
+
+.benefits {
+  background: $bg-about;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  padding-bottom: 5rem;
+
+  &__marquee {
+    background: $bg-about;
+    padding: .75rem 0;
+    margin-bottom: 2rem;
+  }
+
+  &__marquee-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap; 
+  }
+
+  &__marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+
+    font-family: $font-body;
+    font-weight: 700;
+    font-size: .85rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: $brand-primary;
+  }
+
+  &__marquee-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+  }
+
+  @media (max-width: 768px) {
+    &__marquee-list {
+      justify-content: center;
+      flex-wrap: nowrap;
+      white-space: normal;
+      row-gap: .5rem;
+    }
+  }
+
+  &__intro { margin-bottom: 1.5rem; }
+
+  &__eyebrow {
+    @include subtext;
+    color: $text-base;
+    display: block;
+    margin-bottom: .35rem;
+  }
+
+  &__title {
+    @include h1;
+    color: $brand-primary;
+    letter-spacing: -1px;
+    font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+  }
+
+
+  &__grid {
+    list-style: none;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 1023px) { grid-template-columns: 1fr 1fr; }
+    @media (max-width: 639px)  { grid-template-columns: 1fr; }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+   }
+
+  &__media {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    aspect-ratio: 4 / 3;
+    margin-bottom: 1rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__card-title {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $brand-primary;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    line-height: 1.2;
+    margin: 0 0 .5rem;
+
+    min-height: 2.5em; 
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__card-text {
+    font-family: $font-body;
+    font-size: .95rem;
+    line-height: 1.5;
+    color: $text-base;
+    opacity: .9;
+    margin: 0;
+  }
+}
