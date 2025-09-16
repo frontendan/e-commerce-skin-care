@@ -3,14 +3,22 @@
     "foundation-sites": "^6.9.0"
   },
   "scripts": {
-  "build": "sass --load-path=node_modules/foundation-sites/scss src/scss/app.scss dist/css/app.css --style=expanded",
-  "watch:sass": "sass --watch --load-path=node_modules/foundation-sites/scss src/scss/app.scss:dist/css/app.css --style=expanded",
-  "serve": "browser-sync start --server --files 'dist/css/*.css, index.html, src/**/*.js'",
-  "dev": "npm-run-all --parallel watch:sass serve"
+    "build": "npm-run-all build:css build:assets build:html",
+    "build:css": "sass --load-path=node_modules/foundation-sites/scss src/scss/app.scss dist/css/app.css --style=expanded",
+    "build:assets": "cpx \"src/assets/**/*\" dist/assets",
+    "build:html": "cpx \"*.html\" dist",
+
+    "watch:sass": "sass --watch --load-path=node_modules/foundation-sites/scss src/scss/app.scss:dist/css/app.css --style=expanded",
+    "watch:assets": "cpx \"src/assets/**/*\" dist/assets -w",
+    "watch:html": "cpx \"*.html\" dist -w",
+
+    "serve": "browser-sync start --server dist --files 'dist/**/*.html, dist/css/*.css, dist/assets/**/*, dist/**/*.js'",
+    "dev": "npm-run-all --parallel watch:sass watch:assets watch:html serve"
 },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "browser-sync": "^3.0.4",
+    "cpx2": "^7.0.2",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",

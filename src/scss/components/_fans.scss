@@ -56,8 +56,8 @@
 
     &:hover { transform: scale(1.06); }
 
-    &--mute { top: 12px; right: 12px; background: url("../../src/assets/element/mute.svg") center/40px no-repeat, rgba(255,255,255,.95); }
-    &--play { left: 50%; top: 50%; transform: translate(-50%, -50%); background:url("../../src/assets/element/playbutton.svg") center/40px no-repeat, rgba(255,255,255,.95); }
+    &--mute { top: 12px; right: 12px; background: url("../assets/element/mute.svg") center/40px no-repeat, rgba(255,255,255,.95); }
+    &--play { left: 50%; top: 50%; transform: translate(-50%, -50%); background:url("../assets/element/playbutton.svg") center/40px no-repeat, rgba(255,255,255,.95); }
   }
 
   &__meta {
