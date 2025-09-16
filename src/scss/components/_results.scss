@@ -1,0 +1,78 @@
+@use "../variables" as *;
+@use "../utilities/typography" as *;
+
+.results {
+    background: $bg-about;
+    padding: 3rem 0 0;
+
+    &__intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 1.75rem auto;
+    }
+
+    &__title {
+        @include h1;
+        color: $brand-primary;
+        font-size: clamp(2rem, 4.6vw, 2.75rem);
+        letter-spacing: -1px;
+        margin-bottom: 1.5rem;
+    }
+
+    &__copy,
+    &__note {
+        font-family: $font-body;
+        font-size: .95rem;
+        line-height: 1.6;
+        color: $text-base;
+        opacity: .9;
+        margin: 0 0 .75rem 0;
+    }
+
+    &__hero {
+        position: relative;
+        left: 50%;
+        width: 100vw;                 
+        transform: translateX(-50%); 
+        margin: 1.5rem 0 0; 
+        overflow: hidden; 
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__quote {
+        position: absolute;
+        right: 4%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+
+        font-family: 'Inter', system-ui, sans-serf;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: .02em;
+        color: $text-inverse;
+        font-size: clamp(1.25rem, 2.8vw, 3rem);
+        line-height: 1.15;
+
+        text-shadow: 0 2px 10px rgba(0,0,0, .35);
+        max-width: 24ch;
+    }
+
+    @media(max-width: 1023px) {
+        &__quote {
+            position: static;
+            transform: none;
+            max-width: none;
+            padding: 1rem 1.25rem;
+            margin-top: -0.25rem;
+
+            background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.45));
+            color: $text-inverse;
+        }
+    }
+}
