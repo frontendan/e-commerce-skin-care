@@ -34,14 +34,7 @@ $hero-min-h: 640px !default;
   }
 
   .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: $radius-pill;
-    text-decoration: none;
-    font-weight: 900!important;
-    letter-spacing: .12em;
-    text-transform: uppercase;
+
     @include subtext;
     padding: 1.2rem 6rem;
 

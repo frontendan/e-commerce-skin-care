@@ -11,6 +11,7 @@
 @use "utilities/containers";
 @use "utilities/mixins";
 @use "utilities/typography";
+@use "utilities/buttons";
 
 @use "components/announcement";
 @use "components/header";
@@ -20,6 +21,7 @@
 @use "components/results";
 @use "components/benefits";
 @use "components/sets";
+@use "components/ingredients";
 
 /*Foundation components */
 @include foundation-everything;
