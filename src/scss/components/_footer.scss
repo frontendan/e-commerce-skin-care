@@ -1,6 +1,7 @@
 @use "../variables" as *;
 @use "../utilities/typography" as *;
 
+
 .footer {
   background: $color-dark;
   color: $color-white;
@@ -76,12 +77,12 @@
     inset: 8px 8px 8px auto; 
     padding: 0 1.25rem;
     border: 0;
-    border-radius: $radius-pill;
     background: $color-dark;
     color: $color-white;
     font-weight: 800;
     letter-spacing: .02em;
     cursor: pointer;
+    font-family: $font-body;
     transition: transform .18s ease, filter .18s ease;
 
     &:hover { transform: translateY(-1px); filter: brightness(1.06); }
