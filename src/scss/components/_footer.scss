@@ -1,0 +1,203 @@
+@use "../variables" as *;
+@use "../utilities/typography" as *;
+
+.footer {
+  background: $color-dark;
+  color: $color-white;
+  padding: 3rem 0;
+
+  /* Top grid: left column stacks newsletter -> socials -> menus */
+  &__top {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 0.8fr; /* left / middle / brand */
+    gap: 2.5rem;
+    align-items: start;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: left;
+    }
+  }
+
+  &__newsletter {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 1rem;
+    max-width: none; 
+    width: 100%;
+  
+  }
+
+  &__title {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    margin: 0;
+  }
+
+  &__desc {
+    font-family: $font-body; 
+    font-size: .95rem;
+    opacity: .85;
+    margin: 0;
+  }
+
+  .footer__form {
+    width: 100%;
+    margin: 0;
+  }
+
+  .footer__field {
+    position: relative;
+    width: 100%;
+  }
+
+  .footer__input {
+    display: block;
+    width: 100%;
+    height: 56px;
+    padding-inline: 1rem 7.5rem; 
+    border: 0;
+    border-radius: $radius-md;
+    background: $bg-about;
+    font-family: $font-body;
+    font-size: .95rem;
+    color: $color-dark;
+
+    &::placeholder { color: rgba($color-dark,.6); }
+  }
+
+
+  .footer__btn {
+    position: absolute;
+    inset: 8px 8px 8px auto; 
+    padding: 0 1.25rem;
+    border: 0;
+    border-radius: $radius-pill;
+    background: $color-dark;
+    color: $color-white;
+    font-weight: 800;
+    letter-spacing: .02em;
+    cursor: pointer;
+    transition: transform .18s ease, filter .18s ease;
+
+    &:hover { transform: translateY(-1px); filter: brightness(1.06); }
+    &:active { transform: translateY(0); }
+  }
+
+
+  &__socials {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      width: 40px; height: 40px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 999px;
+      background: $color-white;
+      box-shadow: 0 6px 12px rgba(0,0,0,.12);
+      transition: transform .15s ease;
+
+      &:hover { transform: translateY(-2px); }
+
+      img {
+        width: 22px; height: 22px; display: block;
+      }
+    }
+  }
+
+
+  &__menus {
+    margin-top: .75rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+
+    .footer__heading {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-size: .95rem;
+      margin: 0 0 .75rem;
+    }
+
+    ul {
+      list-style: none; margin: 0; padding: 0;
+
+      li { margin-bottom: .4rem; }
+
+      a {
+        font-family: $font-body;
+        font-size: .95rem;
+        color: rgba($color-white, .85);
+        text-decoration: none;
+
+        &:hover { color: $color-accent; }
+      }
+    }
+  }
+
+
+  &__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    .footer__logo {
+      width: 56px; height: auto; display: block;
+    }
+
+    @media (max-width: 1024px) { justify-content: flex-start; }
+  }
+
+  /* Bottom row */
+  &__bottom {
+    margin-top: 2.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,.12);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: start;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  &__copy {
+    font-family: $font-body;
+    font-size: .85rem;
+    opacity: .8;
+  }
+
+  &__disclaimer {
+    font-family: $font-body;
+    font-size: .8rem;
+    line-height: 1.4;
+    color: rgba($color-white,.75);
+    max-width: 420px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 12px;
+    padding: .75rem .9rem;
+  }
+}
