@@ -1,20 +1,34 @@
 {
   "dependencies": {
+    "flickity": "^2.3.0",
     "foundation-sites": "^6.9.0"
   },
-  "scripts": {
-    "build": "npm-run-all build:css build:assets build:html",
+    "scripts": {
+    "build": "npm-run-all build:css build:assets build:vendor build:vendor:jquery build:vendor:whatinput build:vendor:foundation build:js copy:html",
     "build:css": "sass --load-path=node_modules/foundation-sites/scss src/scss/app.scss dist/css/app.css --style=expanded",
     "build:assets": "cpx \"src/assets/**/*\" dist/assets",
-    "build:html": "cpx \"*.html\" dist",
+    "build:vendor": "cpx \"node_modules/flickity/dist/*\" dist/vendor/flickity",
+    "build:js": "cpx \"src/js/**/*\" dist/js",
+    "copy:html": "cpx \"index.html\" dist",
 
     "watch:sass": "sass --watch --load-path=node_modules/foundation-sites/scss src/scss/app.scss:dist/css/app.css --style=expanded",
     "watch:assets": "cpx \"src/assets/**/*\" dist/assets -w",
-    "watch:html": "cpx \"*.html\" dist -w",
+    "watch:vendor": "cpx \"node_modules/flickity/dist/*\" dist/vendor/flickity -w",
+    "watch:js": "cpx \"src/js/**/*\" dist/js -w",
+    "watch:html": "cpx \"index.html\" dist -w",
 
-    "serve": "browser-sync start --server dist --files 'dist/**/*.html, dist/css/*.css, dist/assets/**/*, dist/**/*.js'",
-    "dev": "npm-run-all --parallel watch:sass watch:assets watch:html serve"
-},
+    "build:vendor:jquery": "cpx \"node_modules/jquery/dist/*\" dist/vendor/jquery",
+    "build:vendor:whatinput": "cpx \"node_modules/what-input/dist/*\" dist/vendor/what-input",
+    "build:vendor:foundation": "cpx \"node_modules/foundation-sites/dist/js/*\" dist/vendor/foundation",
+
+    "watch:vendor:jquery": "cpx \"node_modules/jquery/dist/*\" dist/vendor/jquery -w",
+    "watch:vendor:whatinput": "cpx \"node_modules/what-input/dist/*\" dist/vendor/what-input -w",
+    "watch:vendor:foundation": "cpx \"node_modules/foundation-sites/dist/js/*\" dist/vendor/foundation -w",
+
+    "serve": "browser-sync start --server dist --files 'dist/css/**/*.css, dist/js/**/*.js, dist/assets/**/*, dist/vendor/**/*, dist/**/*.html'",
+    "dev": "npm-run-all --parallel watch:sass watch:assets watch:vendor watch:vendor:jquery watch:vendor:whatinput watch:vendor:foundation watch:js watch:html serve"
+  },
+
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "browser-sync": "^3.0.4",

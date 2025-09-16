@@ -6,6 +6,7 @@
   <title>E-Commerce Website</title>
   <link rel="stylesheet" href="/css/app.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/vendor/flickity/flickity.min.css" />
 </head>
 <body>
 
@@ -114,9 +115,9 @@
     </div>
 
     <!-- About: feature bullets -->
-    <div class="about__features">
+    <div class="about__features" >
       <div class="grid-container">
-        <ul class="about__features-grid">
+        <ul class="about__features-grid" data-flickity-on-small>
           <li class="about__feature">
             <img class="about__feature-img" src="/assets/feature-korean-tech.png" alt="Cutting-edge Korean Skincare Technology">
             <p class="about__feature-text">
@@ -691,6 +692,8 @@
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/what-input/dist/what-input.min.js"></script>
   <script src="node_modules/foundation-sites/dist/js/foundation.min.js"></script>
+  <script src="/vendor/flickity/flickity.pkgd.min.js"></script>
+  <script src="/js/feature-slider.js" type="module"></script>
   <script>$(document).foundation();</script>
 </body>
 </html>

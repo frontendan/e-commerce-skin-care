@@ -130,19 +130,67 @@
         color: $text-base;
     }
 
-
-    &__feature-text {
-        font-family: $font-body;
-        font-weight: 400;
-        font-size: 0.95rem;
-        line-height: 1.4;
-        color: $text-base;
-    }
-
-
     @media (max-width: 1023px) {
         &__inner { grid-template-columns: 1fr; }
         &__art   { order: -1; margin-bottom: 1.5rem; }
         &__eyebrow { margin-bottom: 1.5rem; }
     }
+
+      @media (max-width: 639.98px) {
+            &__features {
+            /* Optional: give the carousel a bit more breathing room on small */
+            padding: 1rem 0;
+            }
+
+            &__features-grid {
+            /* Flickity will take over layout; keep things simple */
+            margin-left: -0.5rem;   /* soft edge bleed for nicer swipe */
+            margin-right: -0.5rem;
+            }
+
+            /* Each LI is a slide (cell) */
+            &__feature {
+            width: 82vw;             /* mostly-full-width slide */
+            max-width: 28rem;        /* avoid overly wide on big small devices */
+            margin: 0 0.5rem;        /* gap between slides */
+            /* Keep your existing grid within a card; Flickity positions cells absolutely */
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            gap: 1rem;
+            }
+
+            /* Optional: nicer hand cursor while dragging */
+            .flickity-enabled.is-draggable {
+            cursor: grab;
+            }
+            .flickity-enabled.is-draggable:active {
+            cursor: grabbing;
+            }
+        }
+
+        /* --- MEDIUM+ : ensure we’re a clean grid again --- */
+        @media (min-width: 640px) {
+            &__features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-left: 0;
+            margin-right: 0;
+            }
+
+            &__feature {
+            width: auto;
+            max-width: none;
+            margin: 0;   /* grid gap handles spacing */
+            }
+        }
+
+        /* --- SAFETY: when Flickity destroys, strip inline sizing if any linger --- */
+        &__features-grid {
+            /* If Flickity was destroyed, this prevents stray fixed heights */
+            &:not(.flickity-enabled) {
+            height: auto !important;
+            }
+        }
 }
