@@ -114,8 +114,9 @@
     }
 
     &__feature-img {
-        width: 135px;
-        height: 135px;
+        width: clamp(110px, 16vw, 135px);
+        height: auto; 
+        aspect-ratio: 1 / 1; 
         border-radius: 50%;
         object-fit: cover;
         display: block;
@@ -165,6 +166,10 @@
             .flickity-enabled.is-draggable:active {
             cursor: grabbing;
             }
+        }
+        
+        @media (min-width: 640px) and (max-width: 1023px) {
+            &__feature { grid-template-columns: clamp(110px, 16vw, 135px) 1fr; }
         }
 
         /* --- MEDIUM+ : ---*/
