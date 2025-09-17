@@ -79,5 +79,22 @@ $hero-min-h: 640px !default;
     &__art   { order: -1; margin-bottom: 2rem; }
     &__title { font-size: clamp(2rem, 6vw, 3.5rem); }
     &__content { margin: 0 auto; }
+    &__testi {
+      margin-top: 5rem;
+    }
+
+    &__person {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    &__testi {
+      margin-top: 5rem;
+    }
+
+    &__person {
+      justify-content: center;
+    }
   }
 }

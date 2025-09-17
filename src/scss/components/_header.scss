@@ -104,6 +104,7 @@ $pill-bg:   $color-dark !default;
 }
 
 @media (max-width: 639px) {
+
   .site-header {
     &__brand { font-size: 2.1rem; }
     .btn--dark-pill { padding: .7rem 1.2rem; }
