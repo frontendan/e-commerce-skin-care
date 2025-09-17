@@ -1,5 +1,5 @@
 @use "../variables" as *;
-@use "../utilities//typography" as *;
+@use "../utilities/typography" as *;
 @use "../utilities/mixins" as *;
 @use "../utilities/buttons" as *;
 
@@ -73,6 +73,35 @@
       margin: 0;
     }
   }
+
+  @media (max-width: 639.98px) {
+    &__grid {
+      display: block !important; 
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+      width: 100%;
+    }
+
+    &__card {
+      width: 82vw;
+      max-width: 28rem;
+      margin: 0 0.5rem;
+      flex: 0 0 auto;
+    }
+
+    .flickity-viewport {
+      overflow: hidden; 
+    }
+ 
+    &__grid.flickity-enabled { display: block !important; }
+  }
+
+  @media (min-width: 640px) {
+    &__grid { display: grid; margin-left: 0; margin-right: 0; }
+    &__card { width: auto; max-width: none; margin: 0; }
+  }
+
+  .ingredients__grid:not(.flickity-enabled) { height: auto; }
 }
 
 

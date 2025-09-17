@@ -3,9 +3,12 @@ const selector = '[data-flickity-on-small]';
 const smallMQ = window.matchMedia('(max-width: 639.98px)');
 const reduceMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+
+
 const instances = new WeakMap();
 
 function enableCarousel(el) {
+  
   if (instances.has(el)) return;
 
   const opts = {
@@ -18,7 +21,8 @@ function enableCarousel(el) {
     wrapAround: false,
     imagesLoaded: true,
     selectedAttraction: reduceMotionMQ.matches ? 0.02 : 0.08,
-    friction: reduceMotionMQ.matches ? 0.2 : 0.28
+    friction: reduceMotionMQ.matches ? 0.2 : 0.28,
+    setGallerySize: true,
   };
 
   const flkty = new Flickity(el, opts);
