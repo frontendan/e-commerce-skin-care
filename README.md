@@ -1,3 +1,5 @@
+![D1 Landing Page — Preview](docs/landing-page.jpg)
+
 # D1 Skincare Landing Page  
 
 A responsive landing page built with **HTML, SCSS, and vanilla JS**.  
