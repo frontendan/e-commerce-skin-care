@@ -23,6 +23,7 @@ function enableCarousel(el) {
     selectedAttraction: reduceMotionMQ.matches ? 0.02 : 0.08,
     friction: reduceMotionMQ.matches ? 0.2 : 0.28,
     setGallerySize: true,
+
   };
 
   const flkty = new Flickity(el, opts);
@@ -60,14 +61,11 @@ function applyMode() {
 
 applyMode();
 
-// respond to viewport changes
 smallMQ.addEventListener?.('change', applyMode);
 // Safari fallback
 smallMQ.addListener?.(applyMode);
 
-// respond to motion preference changes (tweak physics if toggled)
 reduceMotionMQ.addEventListener?.('change', () => {
-  // Re-init to apply new friction/attraction
   document.querySelectorAll(selector).forEach((el) => {
     disableCarousel(el);
     if (smallMQ.matches) enableCarousel(el);
