@@ -60,8 +60,9 @@ $pill-bg:   $color-dark !default;
 
   &__right { 
     display: flex; 
-    align-items: 
-    center; gap: 1rem; 
+    align-items: center; 
+    gap: 2.5rem;
+    margin-right: .75rem;
   }
 
   .btn {
@@ -81,6 +82,7 @@ $pill-bg:   $color-dark !default;
       height: 28px; 
       display: block; 
     }
+    gap: 2rem;
   }
 
   &__badge {
@@ -90,7 +92,7 @@ $pill-bg:   $color-dark !default;
     min-width: 18px; 
     height: 18px; 
     padding: 0 5px;
-    background: $color-accent; 
+    background: $color-dark; 
     color: $color-white;
     border-radius: 999px; 
     font-size: 11px; 

@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../utilities/typography" as *;
 
 $annc-height: 38px !default;
 $annc-topline: #e66a00 !default;
@@ -10,14 +11,23 @@ $annc-topline: #e66a00 !default;
   background: $color-accent;
   border-top: 3px solid $annc-topline;
 
-  &__inner { height: $annc-height; display: grid; align-items: center; }
+   &__inner {
+    height: $annc-height;
+    display: flex;
+    align-items: center;      
+    justify-content: center; 
+    padding: 0 .75rem;
+  }
+ 
 
   &__text {
     text-align: center;
     font-size: .8rem;
     font-weight: 800;
+    line-height: 1;
     letter-spacing: .14em;
     text-transform: uppercase;
     color: $color-dark;
+    font-family: $font-body;
   }
 }
