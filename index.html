@@ -515,11 +515,19 @@
   </div>
 </section>
 
-<section class="fans">
+  <section class="fans">
     <div class="grid-container">
       <h2 class="fans__title">What our fans say</h2>
 
-      <ul class="fans__grid">
+      <ul class="fans__grid"
+            data-flickity-on-small
+            data-flickity='{
+              "cellAlign": "center",
+              "contain": true,
+              "imagesLoaded": true,
+              "setGallerySize": true
+            }'
+        >
         <li class="fans__card" style="background-image: url('/assets/fan.jpg');">
 
           <button class="fans__ctrl fans__ctrl--mute" aria-label="Mute/Unmute"></button>
